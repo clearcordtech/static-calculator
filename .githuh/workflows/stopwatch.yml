@@ -3,7 +3,7 @@ name: CICD Static Deploymwnt
 on:
   push:
     branches:
-      - main
+      - master
       
 jobs:
   deploy:
@@ -17,5 +17,5 @@ jobs:
           key:  ${{ secret.SSH_PRIVATE_KEY }}
           script: |
             cd /var/www/html/stopwatch
-            sudo git pull origin main
+            sudo git pull origin master
             echo "Done"
